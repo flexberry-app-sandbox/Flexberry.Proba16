@@ -1,0 +1,211 @@
+﻿{
+  "name": "IISProba16РегРезульт",
+  "modelName": "i-i-s-proba16-рег-результ",
+  "className": "РегРезульт",
+  "nameSpace": "IIS.Proba16",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "датРегРезСобес",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "неПринНаРаб",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "принятНаРаб",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "организация",
+      "relatedTo": "i-i-s-proba16-организация",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "планирСобес",
+      "relatedTo": "i-i-s-proba16-планир-собес",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "тЧРегРезульт",
+      "relatedTo": "i-i-s-proba16-т-ч-рег-результ",
+      "inverse": "регРезульт"
+    }
+  ],
+  "projections": [
+    {
+      "name": "РегРезультE",
+      "modelName": "i-i-s-proba16-рег-результ",
+      "attrs": [
+        {
+          "name": "датРегРезСобес",
+          "caption": "Дат рег рез собес",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "принятНаРаб",
+          "caption": "Принят на раб",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "неПринНаРаб",
+          "caption": "Не прин на раб",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Наименование",
+          "lookupValueField": "наименование",
+          "relationName": "Организация",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "Наименование",
+              "hidden": true,
+              "index": 4
+            }
+          ],
+          "index": 3,
+          "type": "standard",
+          "caption": "Организация",
+          "name": "организация",
+          "relatedTo": "i-i-s-proba16-организация",
+          "inverse": null
+        },
+        {
+          "lookupValue": "ИметьПриСебе",
+          "lookupValueField": "иметьПриСебе",
+          "relationName": "ПланирСобес",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "иметьПриСебе",
+              "caption": "Иметь при себе",
+              "hidden": true,
+              "index": 6
+            }
+          ],
+          "index": 5,
+          "type": "standard",
+          "caption": "Планир собес",
+          "name": "планирСобес",
+          "relatedTo": "i-i-s-proba16-планир-собес",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "ТЧРегРезультE",
+          "caption": "Т ч рег результ",
+          "name": "тЧРегРезульт",
+          "relatedTo": "i-i-s-proba16-т-ч-рег-результ",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "РегРезультL",
+      "modelName": "i-i-s-proba16-рег-результ",
+      "attrs": [
+        {
+          "name": "датРегРезСобес",
+          "caption": "Дат рег рез собес",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "принятНаРаб",
+          "caption": "Принят на раб",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "неПринНаРаб",
+          "caption": "Не прин на раб",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Организация",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "Наименование",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Наименование",
+          "name": "организация",
+          "relatedTo": "i-i-s-proba16-организация",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "ПланирСобес",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "иметьПриСебе",
+              "caption": "Иметь при себе",
+              "hidden": false,
+              "index": 4
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Иметь при себе",
+          "name": "планирСобес",
+          "relatedTo": "i-i-s-proba16-планир-собес",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

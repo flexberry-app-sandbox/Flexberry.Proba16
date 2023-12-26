@@ -1,0 +1,64 @@
+﻿{
+  "applicationCaption": "Proba16",
+  "applicationTitle": "Proba16",
+  "items": [
+    {
+      "link": null,
+      "menuName": "proba16",
+      "caption": "Proba16",
+      "title": "Proba16",
+      "children": [
+        {
+          "link": "i-i-s-proba16-организация-l",
+          "menuName": null,
+          "caption": "Организация",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-proba16-должн-сотр-l",
+          "menuName": null,
+          "caption": "Должн сотр",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-proba16-регист-анкеты-l",
+          "menuName": null,
+          "caption": "Регист анкеты",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-proba16-рег-результ-l",
+          "menuName": null,
+          "caption": "Рег результ",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-proba16-планир-собес-l",
+          "menuName": null,
+          "caption": "Планир собес",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-proba16-сотрудники-l",
+          "menuName": null,
+          "caption": "Сотрудники",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-proba16-вакант-должн-l",
+          "menuName": null,
+          "caption": "Вакант должн",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}
